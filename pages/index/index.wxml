@@ -1,0 +1,18 @@
+<!--index.wxml-->
+
+<image src='../../images/wave-title.png' class='title-img'></image>
+
+<view class='userHead {{isEnter?"enter":""}}' bindtap='changeEnter'>
+  <open-data type="userAvatarUrl"></open-data>
+</view>
+
+<view class="waveWrapper waveAnimation" style='background-color:{{evening}}'>
+  <view class="waveWrapperInner bgTop">
+    <image class="wave waveTop" src="../../images/wave-top.png"></image>
+  </view>
+  <view class="waveWrapperInner bgBottom">
+    <image class="wave waveBottom" src="../../images/wave-bot.png"></image>
+  </view>
+</view>
+
+<button class='enterBtn' open-type='getUserInfo' bindgetuserinfo='navigate'>授权进入</button>
